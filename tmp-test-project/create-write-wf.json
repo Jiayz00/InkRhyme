@@ -1,0 +1,8 @@
+{
+  "name": "my-write",
+  "target": "write-chapter",
+  "steps": [
+    {"id": "s1", "agent": "planner", "enabled": true, "options": {}},
+    {"id": "s2", "agent": "writer", "enabled": true, "options": {}}
+  ]
+}

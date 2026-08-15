@@ -1,0 +1,41 @@
+{
+  "name": "inkrhyme",
+  "version": "0.1.0",
+  "private": true,
+  "description": "InkRhyme — interactive AI writing workbench for long-form fiction, from idea to finished novel",
+  "keywords": [
+    "ai-writing-workbench",
+    "ai-novel-writing",
+    "ai-writing-agent",
+    "novel-generator",
+    "interactive-fiction",
+    "creative-writing-ai",
+    "electron",
+    "desktop-app"
+  ],
+  "license": "AGPL-3.0-only",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jiayz00/InkRhyme"
+  },
+  "scripts": {
+    "build": "pnpm -r build",
+    "dev": "pnpm -r --parallel dev",
+    "dev:desktop": "pnpm --filter @inkrhyme/desktop dev",
+    "test": "pnpm -r test",
+    "lint": "pnpm -r lint",
+    "typecheck": "pnpm -r typecheck",
+    "release": "pnpm build && pnpm test"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=9.0.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "@mariozechner/pi-ai": "0.67.1",
+      "@mariozechner/pi-agent-core": "0.67.1"
+    }
+  },
+  "packageManager": "pnpm@11.16.0+sha512.b767e9a98fc87aec0f42daefcd0e84941c2cdb45d73c4e1e68860fb2bdfdbe032ab592105479e5e05c237f740c8a5ffdbbb52385797ddc2296745a1bbb883e8d"
+}

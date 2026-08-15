@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📜</text></svg>">
+    <title>InkOS Studio</title>
+    <script>
+      // Polyfill Node `process` global for browser dev (undici via ai SDK references it).
+      window.process = window.process || {
+        env: {},
+        platform: "browser",
+        browser: true,
+        version: "",
+        versions: {},
+        nextTick: function (cb) { setTimeout(cb, 0); },
+      };
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
